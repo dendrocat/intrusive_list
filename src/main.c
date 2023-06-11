@@ -66,15 +66,15 @@ int main() {
     i_list l = { NULL };
     char command[240];
     while (1) {
-        scanf_s("%s", command, 240);
+        scanf("%s", command, 240);
         if (strcmp(command, "add") == 0) {
             int x, y;
-            scanf_s("%d %d", &x, &y);
+            scanf("%d %d", &x, &y);
             add_point(&l, x, y);
         }
         else if (strcmp(command, "rm") == 0) {
             int x, y;
-            scanf_s("%d%d", &x, &y);
+            scanf("%d %d", &x, &y);
             remove_point(&l, x, y);
         }
         else if (strcmp(command, "print") == 0) show_all_points(&l);
